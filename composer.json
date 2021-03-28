@@ -1,0 +1,41 @@
+{
+    "name": "ezoterik/yii2-easymde",
+    "description": "Easy MarkDown Editor for Yii2",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "extension",
+        "EasyMDE",
+        "Easy MarkDown Editor",
+        "SimpleMDE",
+        "markdown"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oleg Balykin",
+            "email": "ezoterik.h@gmail.com",
+            "homepage": "http://ezoterik.name",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "yiisoft/yii2": "~2.0.41",
+        "npm-asset/easymde": "^2.13.1"
+    },
+    "suggest": {
+        "yiisoft/yii2-coding-standards": "you can use this package to check for code style issues when contributing to repository"
+    },
+    "autoload": {
+        "psr-4": {
+            "ezoterik\\easymde\\": ""
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
