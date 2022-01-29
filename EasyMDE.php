@@ -28,7 +28,11 @@ final class EasyMDE extends InputWidget
         $view = $this->getView();
         Asset::register($view);
         $varName = Inflector::variablize('editor_' . $this->id);
-        $script = "var {$varName} = new EasyMDE(" . $this->getEditorOptions() . ');';
+
+        $script = "var {$varName} = new EasyMDE(" . $this->getEditorOptions() . ");\n";
+        $script .= "if(!window.EasyMDEInstances) { window.EasyMDEInstances = []; }\n";
+        $script .= "window.EasyMDEInstances['{$this->options['id']}'] = {$varName};\n";
+
         $view->registerJs($script);
     }
 
